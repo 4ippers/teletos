@@ -4,13 +4,13 @@ import json
 import random
 
 
-def generate_id() -> str:
+def generate_task_id() -> str:
     return str(random.randint(0, 100000))
 
 
 class BaseTask:
     def __init__(self):
-        self.id = generate_id()
+        self.id = generate_task_id()
         self.type = None
 
     def to_dict(self, pass_null=True, pass_internal_attr=True):

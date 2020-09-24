@@ -14,7 +14,7 @@ setuptools.setup(
     url="github.com/4ippers/teletos",
     package_dir={'telegos': 'telegos',
                  },
-    packages=['telegos.models', 'telegos.task.core', 'telegos.task.module'],
+    packages=['telegos.models', 'telegos.task', 'telegos.task.core', 'telegos.task.module'],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
