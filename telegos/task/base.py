@@ -13,6 +13,12 @@ class BaseTask:
         self.id = generate_task_id()
         self.type = None
 
+    def from_dict(self, dict_data: dict):
+        keys = self.__dict__.keys()
+        for key, value in dict_data.items():
+            if key in keys:
+                setattr(self, key, value)
+
     def to_dict(self, pass_null=True, pass_internal_attr=True):
         result = {}
         for var in self.__dict__:
