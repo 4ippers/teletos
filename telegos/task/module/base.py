@@ -18,6 +18,7 @@ class ModuleTaskBase(BaseTask):
         self.module = module_name
         self.reply_markup = None
         self.reply_to_message_id = None
+        self.type = None
 
     def check(self):
         pass
