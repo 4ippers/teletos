@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from .core import CoreTask, CoreTaskTypes
+from telegos.task.core.core import CoreTask, CoreTaskTypes
 
 
 class CoreTaskInit(CoreTask):

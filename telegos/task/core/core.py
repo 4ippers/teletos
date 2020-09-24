@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import json
-from task.base import BaseTask
+from telegos.task.base import BaseTask
 
 
 class CoreTaskTypes:

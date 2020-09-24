@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from .base import BaseModel
+from telegos.models.base import BaseModel
 
 
 class UserModel(BaseModel):

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from .core import CoreTask, CoreTaskTypes
-from models.message import MessageModel
+from telegos.task.core.core import CoreTask, CoreTaskTypes
+from telegos.models.message import MessageModel
 
 
 class CoreTaskMessage(CoreTask):

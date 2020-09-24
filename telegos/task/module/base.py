@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import random
 import json
-from task.base import BaseTask
+from telegos.task.base import BaseTask
 
 
 class ModuleTaskTypes:
