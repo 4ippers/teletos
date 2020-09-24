@@ -12,7 +12,7 @@ class ModuleTaskTypes:
     SEND_PHOTO = "send_photo"
 
 
-class MessageBase(BaseTask):
+class ModuleTaskBase(BaseTask):
     def __init__(self, module_name):
         super().__init__()
         self.module = module_name
@@ -23,7 +23,7 @@ class MessageBase(BaseTask):
         pass
 
 
-class MessageBaseChatIdPhone(MessageBase):
+class ModuleTaskBaseChatIdPhone(ModuleTaskBase):
     def __init__(self, module_name: str, chat_id: str = None, phone: str = None):
         super().__init__(module_name=module_name)
         self.chat_id = chat_id

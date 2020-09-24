@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 import json
 from telegos.models.parse_mode import ParseMode
-from telegos.task.module.base import MessageBaseChatIdPhone, ModuleTaskTypes
+from telegos.task.module.base import ModuleTaskBaseChatIdPhone, ModuleTaskTypes
 
 
-class ModuleTextTask(MessageBaseChatIdPhone):
+class ModuleTaskSendText(ModuleTaskBaseChatIdPhone):
     TYPE_NAME = ModuleTaskTypes.SEND_MESSAGE
 
     def __init__(self, module_name: str, text: str, parse_mode: str = ""):
@@ -15,7 +15,7 @@ class ModuleTextTask(MessageBaseChatIdPhone):
         self.parse_mode = parse_mode if parse_mode else ParseMode.MARKDOWN
 
 
-class ModuleDeleteMessageTask(MessageBaseChatIdPhone):
+class ModuleTaskDeleteMessage(ModuleTaskBaseChatIdPhone):
     TYPE_NAME = ModuleTaskTypes.DELETE_MESSAGE
 
     def __init__(self, module_name: str, message_id: str):

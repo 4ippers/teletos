@@ -1,1 +1,3 @@
-__all__ = ['BaseModel', 'MessageModel', 'ParseMode', 'UserModel']
+from telegos.models.base import BaseModel
+from telegos.models.message import MessageModel
+from telegos.models.user import UserModel
