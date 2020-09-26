@@ -35,7 +35,7 @@ class KeyboardButton(Button):
     def __init__(self, text: str):
         super().__init__()
         self.type = ButtonTypes.KEYBOARD
-        self.text = f"{self.text}{self._JOIN_SYMBOL}"
+        self.text = f"{text}{self._JOIN_SYMBOL}"
 
 
 class InlineKeyButton(Button):
