@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import json
 
+
 class ButtonTypes:
     INLINE = "inline_button"
     KEYBOARD = "keyboard_button"
@@ -35,12 +36,12 @@ class Button:
 
 
 class KeyButton(Button):
-    _JOIN_SYMBOL = ";"
+    _JOIN_SYMBOL = ""
 
     def __init__(self, text: str):
         super().__init__()
         self.type = ButtonTypes.KEYBOARD
-        self.text = f"{text}{self._JOIN_SYMBOL}"
+        self.text = text
 
 
 class InlineKeyButton(Button):
