@@ -18,5 +18,5 @@ class BaseModel(DictSerialize):
                 if var in self._dict_handlers:
                     model = self._dict_handlers[var]()
                     model.from_tg(atr)
-                    atr = model.to_dict()
+                    atr = model
                 setattr(self, var, atr)
