@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import json
 
-`class ButtonTypes:
+class ButtonTypes:
     INLINE = "inline_button"
     KEYBOARD = "keyboard_button"
 
