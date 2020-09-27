@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="telegos",
-    version="0.0.1",
+    version="0.0.2",
     author="4ippers",
     author_email="example@example.com",
     description="telegos models",
@@ -15,6 +15,7 @@ setuptools.setup(
     package_dir={'telegos': 'telegos',
                  },
     packages=['telegos.models', 'telegos.task', 'telegos.task.core', 'telegos.task.module'],
+    py_modules=['telegos.helpers'],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

@@ -10,4 +10,8 @@ class CoreTaskInlineButton(CoreTask):
     def __init__(self, to_module: str, chat_id: str, callback: CallBackQueryModel):
         super().__init__(to_module, chat_id=chat_id)
         self.type = self.TYPE_NAME
-        self.callback = callback.to_dict()
+        self.callback: CallBackQueryModel = callback
+
+        self._dict_handlers = {
+            'callback': CallBackQueryModel
+        }

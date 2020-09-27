@@ -1,33 +1,22 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import json
+from telegos.helpers.dict_helper import DictSerialize
 
 
-class BaseModel:
-    def to_json(self, pass_null=True, pass_internal_attr=True) -> str:
-        result = self.to_dict(pass_null, pass_internal_attr)
-        return json.dumps(result)
+class BaseModel(DictSerialize):
+    def __init__(self):
+        super().__init__()
 
     def from_tg(self, data):
         class_vars = self.__dict__
         for var in class_vars:
+            if var.startswith("_"):
+                continue
+
             if atr := getattr(data, var):
+                if var in self._dict_handlers:
+                    model = self._dict_handlers[var]()
+                    model.from_tg(atr)
+                    atr = model.to_dict()
                 setattr(self, var, atr)
-
-    def to_dict(self, pass_null=True, pass_internal_attr=True):
-        result = {}
-        for var in self.__dict__:
-            if pass_internal_attr and var.startswith("_"):
-                continue
-
-            if not pass_null:
-                result[var] = self.__dict__[var]
-                continue
-
-            if self.__dict__[var]:
-                result[var] = self.__dict__[var]
-        return result
-
-
-
-

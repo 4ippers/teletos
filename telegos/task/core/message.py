@@ -10,4 +10,9 @@ class CoreTaskMessage(CoreTask):
     def __init__(self, to_module: str, chat_id: str, message: MessageModel):
         super().__init__(to_module, chat_id=chat_id)
         self.type = self.TYPE_NAME
-        self.message = message.to_dict()
+        self.message: MessageModel = message
+
+        self._dict_handlers = {
+            'message': MessageModel
+        }
+
