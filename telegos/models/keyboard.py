@@ -28,6 +28,12 @@ class Button:
                 result[var] = self.__dict__[var]
         return result
 
+    def from_dict(self, dict_data: dict):
+        keys = self.__dict__.keys()
+        for key, value in dict_data.items():
+            if key in keys:
+                setattr(self, key, value)
+
 
 class KeyboardButton(Button):
     _JOIN_SYMBOL = ";"
