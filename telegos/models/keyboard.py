@@ -9,7 +9,7 @@ class ButtonTypes:
 
 
 class Button:
-    _JOIN_SYMBOL = ""
+    JOIN_SYMBOL = ""
 
     def __init__(self):
         self.type = None
@@ -36,7 +36,7 @@ class Button:
 
 
 class KeyButton(Button):
-    _JOIN_SYMBOL = ""
+    JOIN_SYMBOL = ""
 
     def __init__(self, text: str):
         super().__init__()
@@ -45,7 +45,7 @@ class KeyButton(Button):
 
 
 class InlineKeyButton(Button):
-    _JOIN_SYMBOL = "|"
+    JOIN_SYMBOL = "|"
 
     def __init__(self, module_name: str, text: str, callback_data: str, url=None):
         super().__init__()
