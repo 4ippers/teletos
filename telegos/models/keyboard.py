@@ -51,5 +51,5 @@ class InlineKeyButton(Button):
         super().__init__()
         self.type = ButtonTypes.INLINE
         self.text = text
-        self.callback_data = f"{module_name}{self._JOIN_SYMBOL}{callback_data}"
+        self.callback_data = f"{module_name}{self.JOIN_SYMBOL}{callback_data}"
         self.url = url
