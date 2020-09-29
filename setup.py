@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="telegos",
-    version="0.0.2",
+    version="0.0.3",
     author="4ippers",
     author_email="example@example.com",
     description="telegos models",
