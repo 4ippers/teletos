@@ -7,6 +7,7 @@ from telegos.task.base import BaseTask
 class CoreTaskTypes:
     INIT = "init"
     MESSAGE = "message"
+    COMMAND = "command"
     INLINE_BUTTON = "inline_button"
 
 
